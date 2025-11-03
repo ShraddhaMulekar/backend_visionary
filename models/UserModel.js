@@ -26,7 +26,7 @@ const UserSchema = new Schema(
       default: Date.now,
     },
   },
-  { timestamps: true }
+  { versionKey: false }
 );
 
-export const UserModel = mongoose.model("User", UserSchema);
+export const UserModel = mongoose.model("user", UserSchema);
