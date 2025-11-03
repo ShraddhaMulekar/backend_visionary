@@ -22,7 +22,7 @@ export const registered = async (req, res) => {
         }
         const newUser = new UserModel({ name, email, role, password: hash });
         await newUser.save();
-        return res.status(201).json({ msg: "User registered successfully" });
+        return res.status(201).json({ msg: "User registered successfully", new_user : newUser });
       }
     );
   } catch (error) {
